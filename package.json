@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run -s test:jest && npm run test:success || npm run -s test:failure",
-    "test:jest": "NODE_ENV=test jest --verbose --coverage ./test/unit",
+    "test:jest": "cross-env NODE_ENV=test jest --verbose --coverage ./test/unit",
     "test:success": "echo 'TESTS SUCCESSFUL :-)'",
     "test:failure": "echo 'TESTS FAILED :-(' && exit 1",
     "cz": "git-cz",
@@ -37,9 +37,9 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
-    "elasticsearch": "^15.2.0",
+    "elasticsearch": "^16.0.0",
     "http-status": "^1.2.0",
-    "js-yaml": "^3.12.0",
+    "js-yaml": "^3.13.1",
     "json-stringify-safe": "^5.0.1",
     "mime-types": "^2.1.20",
     "moment": "^2.22.2",
@@ -47,7 +47,7 @@
     "mysql": "^2.16.0",
     "os-utils": "0.0.14",
     "redis": "^2.8.0",
-    "superagent": "^3.8.3",
+    "superagent": "^5.0.2",
     "superagent-no-cache": "^0.1.1"
   },
   "keywords": [
@@ -63,15 +63,16 @@
     "healthchecks-api"
   ],
   "devDependencies": {
-    "commitizen": "^3.0.2",
+    "commitizen": "^4.0.3",
+    "cross-env": "^7.0.3",
     "cwd": "^0.10.0",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.6.1",
-    "eslint-plugin-jest": "^22.0.0",
-    "eslint-plugin-jsdoc": "^3.9.1",
+    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-jsdoc": "^15.8.3",
     "istanbul": "^0.4.5",
     "jest": "^23.6.0",
-    "nock": "^10.0.0",
+    "nock": "^10.0.6",
     "semantic-release": "^15.9.17",
     "travis-deploy-once": "^5.0.9"
   },
